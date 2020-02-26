@@ -1,10 +1,8 @@
 # tarjam
 
-
 ```Dockerfile
-RUN curl https://git.io/tarjam | bash -s <remote-tarball> <local-dir>
+RUN curl -sL git.io/tarjam | bash -s <remote-tarball> <local-dir>
 ```
-
 
 ## Url shortening
 
