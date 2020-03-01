@@ -1,0 +1,16 @@
+os: linux
+group: stable
+dist: trusty
+language: generic
+
+env:
+  - DOCKER_COMPOSE_VERSION=1.22.0
+
+before_install:
+  - bash <(curl -sL https://git.io/get-docker-compose)
+
+script:
+  - make test
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
