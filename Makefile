@@ -21,3 +21,8 @@ install: install-lib install-dev
 test:
 	@bash lcov.sh test/*.test.sh -x lcov.sh
 
+permissions:
+	chmod +x tarjam.sh
+
+tdd: permissions
+	bats test/tarjam.bats
